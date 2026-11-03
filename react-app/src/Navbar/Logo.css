@@ -1,0 +1,13 @@
+p {
+  text-align: center;
+  color: #fff;
+  font-size: large;
+  margin: 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+}

@@ -1,0 +1,25 @@
+.quick-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding-right: 5rem;
+  padding-bottom: 1rem;
+  font-size: small;
+}
+
+.quick-links-center {
+  margin-left: auto;
+}
+
+.quick-links-center .quick-links a {
+  text-decoration: underline;
+  color: #fff;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Add border to all list items except the last one */
+li:not(:last-child) a {
+  border-right: 2px solid #fff;
+}
