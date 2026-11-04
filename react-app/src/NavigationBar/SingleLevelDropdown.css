@@ -1,0 +1,25 @@
+.dropdown-menu {
+  position: relative;
+  padding-top: 12px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  display: block;
+}
+
+.dropdown-menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: medium;
+}

@@ -1,12 +1,10 @@
 import "./App.css";
-import { QuickLinks } from "./Navbar/QuickLinks";
-import { Logo } from "./Navbar/Logo";
+import { NavigationBar } from "./NavigationBar/NavigationBar";
 
 function App() {
   return (
-    <div className="navbar">
-      <QuickLinks />
-      <Logo />
+    <div>
+      <NavigationBar />
     </div>
   );
 }
