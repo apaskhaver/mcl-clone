@@ -1,4 +1,4 @@
-import { useState, type JSX } from "react";
+import { type JSX } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./SingleLevelDropdown.css";
 
@@ -20,14 +20,11 @@ export const SingleLevelDropdownMenu = ({
   openMenuId,
   setOpenMenuId,
 }: SingleLevelDropdownMenuProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = (buttonLabel: string) => {
     if (openMenuId === buttonLabel) {
-      setIsMenuOpen((prev) => !prev);
+      setOpenMenuId(null);
     } else {
       setOpenMenuId(buttonLabel);
-      setIsMenuOpen(true);
     }
   };
 
@@ -35,13 +32,9 @@ export const SingleLevelDropdownMenu = ({
     <div className="dropdown-menu">
       <button onClick={() => toggleMenu(buttonLabel)}>
         {buttonLabel}
-        {isMenuOpen && openMenuId === buttonLabel ? (
-          <FaChevronUp />
-        ) : (
-          <FaChevronDown />
-        )}
+        {openMenuId === buttonLabel ? <FaChevronUp /> : <FaChevronDown />}
       </button>
-      {isMenuOpen && openMenuId === buttonLabel && (
+      {openMenuId === buttonLabel && (
         <div className="dropdown-content">
           {items.map((item, index) => (
             <a key={index} href={item.url}>

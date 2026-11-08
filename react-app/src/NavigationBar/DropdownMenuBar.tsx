@@ -7,8 +7,6 @@ import { Search } from "./Search";
 export const DropdownMenuBar = () => {
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
 
-  console.log(openMenuId);
-
   return (
     <nav className="dropdown-menu-bar">
       {dropdownMenus.map((menu) => (
