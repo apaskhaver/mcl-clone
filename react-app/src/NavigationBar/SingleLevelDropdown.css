@@ -1,16 +1,24 @@
 .dropdown-menu {
   position: relative;
-  padding-top: 12px;
 }
 
 .dropdown-content {
   position: absolute;
-  top: 100%;
+  top: 52px;
   left: 0;
+  background-color: white;
+  min-width: 16rem;
+  max-width: 28rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #7a00df;
+  color: white;
 }
 
 .dropdown-content a {
   display: block;
+  color: black;
 }
 
 .dropdown-menu button {

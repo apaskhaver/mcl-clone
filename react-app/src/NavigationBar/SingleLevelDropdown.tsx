@@ -4,6 +4,8 @@ import "./SingleLevelDropdown.css";
 
 interface SingleLevelDropdownMenuProps {
   buttonLabel: string;
+  openMenuId: string | null;
+  setOpenMenuId: (id: string | null) => void;
   items: {
     title: string;
     url?: string;
@@ -15,18 +17,31 @@ interface SingleLevelDropdownMenuProps {
 export const SingleLevelDropdownMenu = ({
   buttonLabel,
   items,
+  openMenuId,
+  setOpenMenuId,
 }: SingleLevelDropdownMenuProps) => {
-  const [isMenuOpen, setisMenuOpen] = useState(false);
-  const handleToggle = () => {
-    setisMenuOpen((prev) => !prev);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = (buttonLabel: string) => {
+    if (openMenuId === buttonLabel) {
+      setIsMenuOpen((prev) => !prev);
+    } else {
+      setOpenMenuId(buttonLabel);
+      setIsMenuOpen(true);
+    }
   };
+
   return (
     <div className="dropdown-menu">
-      <button onClick={handleToggle}>
+      <button onClick={() => toggleMenu(buttonLabel)}>
         {buttonLabel}
-        {isMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+        {isMenuOpen && openMenuId === buttonLabel ? (
+          <FaChevronUp />
+        ) : (
+          <FaChevronDown />
+        )}
       </button>
-      {isMenuOpen && (
+      {isMenuOpen && openMenuId === buttonLabel && (
         <div className="dropdown-content">
           {items.map((item, index) => (
             <a key={index} href={item.url}>
