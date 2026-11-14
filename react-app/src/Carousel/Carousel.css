@@ -1,0 +1,19 @@
+.slide-director {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  padding: 0 20px;
+}
+
+.left,
+.right {
+  cursor: pointer;
+  padding-inline: 30rem;
+}
+
+.carousel img {
+  width: 1090px;
+  height: 363px;
+}

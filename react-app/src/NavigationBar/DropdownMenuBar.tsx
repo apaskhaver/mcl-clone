@@ -11,6 +11,7 @@ export const DropdownMenuBar = () => {
     <nav className="dropdown-menu-bar">
       {dropdownMenus.map((menu) => (
         <SingleLevelDropdownMenu
+          key={menu.title}
           openMenuId={openMenuId}
           setOpenMenuId={setOpenMenuId}
           buttonLabel={menu.title}

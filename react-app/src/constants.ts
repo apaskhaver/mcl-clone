@@ -1,3 +1,6 @@
+import diaperDrivePhoto from "../src/assets/diaper-drive.png";
+import nationalCaregiversMonthPhoto from "../src/assets/national-caregivers-month.jpg";
+
 export const dropdownMenus = [
   {
     title: "About Us",
@@ -148,5 +151,14 @@ export const dropdownMenus = [
       { selection: "Text Notifications", url: "#" },
       { selection: "WiFi Access", url: "#" },
     ],
+  },
+];
+
+export const carouselImages = [
+  { id: 1, title: "Diaper Drive", content: diaperDrivePhoto },
+  {
+    id: 2,
+    title: "National Caregivers Month",
+    content: nationalCaregiversMonthPhoto,
   },
 ];
