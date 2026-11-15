@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { RightArrow } from "./RightArrow";
 import { LeftArrow } from "./LeftArrow";
 import "./Carousel.css";
@@ -14,17 +14,24 @@ export const Carousel = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === carouselImages.length ? 0 : prevIndex + 1,
     );
-  };
+  }, [carouselImages.length]);
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? carouselImages.length - 1 : prevIndex - 1,
     );
-  };
+  }, [carouselImages.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex, handleNext]);
 
   return (
     <div className="carousel">

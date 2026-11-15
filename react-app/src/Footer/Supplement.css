@@ -1,0 +1,12 @@
+.supplement-section {
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.supplement-section img {
+  width: 6rem;
+  height: auto;
+}

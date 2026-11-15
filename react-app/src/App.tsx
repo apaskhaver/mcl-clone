@@ -3,6 +3,7 @@ import { NavigationBar } from "./NavigationBar/NavigationBar";
 import { Carousel } from "./Carousel/Carousel";
 import { carouselImages } from "./constants";
 import { Announcement } from "./Announcement/Announcement";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <NavigationBar />
       <Announcement />
       <Carousel carouselImages={carouselImages} />
+      <Footer />
     </div>
   );
 }

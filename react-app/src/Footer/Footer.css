@@ -1,0 +1,26 @@
+footer {
+  background-color: #264d35;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+.footer-sections {
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+}
+
+button {
+  background-color: #252b4de6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2rem;
+  margin: 1rem;
+  font-size: 1rem;
+}
