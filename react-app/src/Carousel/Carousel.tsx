@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import { RightArrow } from "./RightArrow";
-import { LeftArrow } from "./LeftArrow";
+import { RightArrow } from "../shared/RightArrow";
+import { LeftArrow } from "../shared/LeftArrow";
 import "./Carousel.css";
 
 export const Carousel = ({
