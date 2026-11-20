@@ -19,7 +19,7 @@ export const LibraryHours = () => {
           </p>
         </p>
       </section>
-      <button>View Our Hours</button>
+      <button className="footer-button">View Our Hours</button>
     </section>
   );
 };

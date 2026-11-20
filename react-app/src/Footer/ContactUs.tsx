@@ -14,7 +14,7 @@ export const ContactUs = () => {
           <i>Lawrence Township, NJ 08648</i>
         </p>
       </section>
-      <button>Contact Us</button>
+      <button className="footer-button">Contact Us</button>
     </section>
   );
 };

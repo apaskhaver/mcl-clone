@@ -27,8 +27,56 @@
   align-items: center;
 }
 
+.menu {
+  margin-left: 16rem;
+}
+
 .menu a {
   display: block;
   color: black;
-  margin-left: 16rem;
+}
+
+.search-dropdown-content {
+  display: flex;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  position: relative;
+  width: 60%;
+  border-radius: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.search-dropdown-content .dropdown-menu {
+  width: 100%;
+}
+
+.search-dropdown-content button {
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+input {
+  padding: 1rem;
+  width: 60%;
+  color: gray;
+  box-sizing: border-box;
+}
+
+.search-button {
+  display: block;
+  background-color: #252b4de6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  width: 60%;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+#search-checkbox {
+  width: auto;
 }
